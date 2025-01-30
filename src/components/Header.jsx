@@ -1,4 +1,4 @@
-import { Phone, Globe, Home, X, ChevronDown } from "lucide-react";
+import { Phone,  Home, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; 
@@ -72,12 +72,7 @@ export default function Header() {
                 </Link>
               </li>
 
-              <li className="ml-auto">
-                <button className="py-2 px-3 text-sm flex items-center gap-2 hover:bg-white/10 rounded">
-                  <Globe className="h-4 w-4" />
-                  EN
-                </button>
-              </li>
+             
             </ul>
 
             {/* Mobile Menu Button */}
@@ -114,12 +109,7 @@ export default function Header() {
               <li>
                 <Link to="/blog" className="py-2">Blog</Link>
               </li>
-              <li>
-                <button className="py-2 px-3 text-sm flex items-center gap-2 hover:bg-white/10 rounded">
-                  <Globe className="h-4 w-4" />
-                  EN
-                </button>
-              </li>
+              
             </ul>
           </motion.div>
         </div>
