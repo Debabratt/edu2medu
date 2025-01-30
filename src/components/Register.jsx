@@ -1,135 +1,80 @@
+import { motion } from 'framer-motion';
 
-import { motion } from "framer-motion";
-
-const Register = () => {
+export default function Register() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="min-h-screen flex justify-center items-center bg-gray-100 py-8"
-    >
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
-        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-          Register at UWC Mahindra College
-        </h2>
-        <form className="space-y-4">
-          <div>
-            <label htmlFor="schoolName" className="block text-gray-700">
-              School Name
-            </label>
-            <input
-              type="text"
-              id="schoolName"
-              value="UWC Mahindra College"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
+    <div className="container mx-auto px-4 py-12">
+      <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="space-y-1 mt-20 lg:py-30 lg:w-1/2">
+          <h1 className="text-4xl flex lg:px-20 md:text-3xl lg:text-5xl font-bold tracking-tight">
+            ACHIEVE ENROLLMENT
+          </h1>
+          <h2 className="text-4xl flex lg:px-20 lg:mt-8 md:text-4xl lg:text-4xl font-bold tracking-tight">
+            OBJECTIVES WITH <img src="logo2.jpg" alt="" className="w-auto h-12" />
+          </h2>
+          <p className="text-lg lg:px-23 lg:mt-20 text-gray-600 max-w-2xl">
+            Streamlining the school admission process to enhance accessibility, attract a diverse student body, and optimize resource usage, all while maintaining a strong focus on teaching and learning.
+          </p>
+        </div>
 
-          <div>
-            <label htmlFor="location" className="block text-gray-700">
-              Location
-            </label>
-            <input
-              type="text"
-              id="location"
-              value="Pune, Maharashtra"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="tuitionFee" className="block text-gray-700">
-              Annual Tuition Fee
-            </label>
-            <input
-              type="text"
-              id="tuitionFee"
-              value="₹24,80,625 / annum"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="rating" className="block text-gray-700">
-              Rating
-            </label>
-            <input
-              type="text"
-              id="rating"
-              value="★★★☆☆ 3.7"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="schoolType" className="block text-gray-700">
-              School Type
-            </label>
-            <input
-              type="text"
-              id="schoolType"
-              value="Boarding School"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="board" className="block text-gray-700">
-              Board
-            </label>
-            <input
-              type="text"
-              id="board"
-              value="IB DP"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="gender" className="block text-gray-700">
-              Gender
-            </label>
-            <input
-              type="text"
-              id="gender"
-              value="Co-Ed"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="classRange" className="block text-gray-700">
-              Class Range
-            </label>
-            <input
-              type="text"
-              id="classRange"
-              value="Class 11 - 12"
-              readOnly
-              className="mt-2 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-md text-gray-700"
-            />
-          </div>
-
-          <div className="mt-6">
-            <button
-              type="submit"
-              className="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition duration-200"
-            >
-              Register
-            </button>
-          </div>
-        </form>
+        <div className="relative lg:w-1/3 lg:mt-20">
+          <div className="absolute inset-0 bg-gradient-to-t from-purple-600 to-pink-400 opacity-30 blur-xl rounded-full"></div>
+          <img
+            src="student.jpg"
+            alt="Educational items illustration"
+            className="object-cover rounded-full shadow-2xl w-full h-auto border-4 border-transparent bg-clip-border hover:border-transparent hover:ring-8 hover:ring-offset-2 hover:ring-[#17a2b8] transform hover:scale-110 transition-all duration-300 ease-in-out"
+          />
+        </div>
       </div>
-    </motion.div>
-  );
-};
 
-export default Register;
+      {/* Motion Divider Line */}
+      <motion.div
+        className="my-12 mx-auto w-full border-t-4 border-black"
+        initial={{ width: 0 }}
+        animate={{ width: '100%' }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+      ></motion.div>
+
+      {/* Second Section */}
+      <motion.div
+        className="mt-24 grid lg:grid-cols-2 gap-12 items-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="space-y-6 ">
+          <h2 className="lg:text-4xl  text-4xl  lg:px-20  flex font-bold">
+            List your school on <img src="logo2.jpg" alt="" className="w-auto h-10" />
+          </h2>
+          <ul className="space-y-4 lg:px-20 font-bold">
+            {[
+              "Unlock your key to reaching your enrollment objectives",
+              "Build and manage your online presence",
+              "Get considered by parents who visit Edu2medu",
+              "Showcase your school features to get considered by parents",
+              "Get access to analytics and qualified leads",
+            ].map((item, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <span className="text-red-600 mt-1">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="relative  lg:mt-40 h-[500px]">
+          <img
+            src="bus.jpg"
+            alt="Terms of service illustration"
+            className="object-contain rounded-lg shadow-lg"
+          />
+        </div>
+      </motion.div>
+
+      {/* Third Section: Registration Form */}
+     
+  
+
+
+
+    </div>
+  );
+}

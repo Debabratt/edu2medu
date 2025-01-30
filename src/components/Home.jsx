@@ -9,7 +9,7 @@ const Home = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative w-full bg-black min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video with Gradient Overlay */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
