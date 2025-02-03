@@ -1,4 +1,4 @@
-import { Phone,  Home, X, ChevronDown } from "lucide-react";
+import { Phone, Home, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
@@ -10,6 +10,11 @@ export default function Header() {
   // Handle Login Click
   const handleLoginClick = () => {
     navigate("/login");
+  };
+
+  // Function to close the menu when a link is clicked
+  const handleMenuClose = () => {
+    setMenuOpen(false);
   };
 
   return (
@@ -96,36 +101,35 @@ export default function Header() {
           >
             <ul className="flex flex-col items-start text-white p-6 gap-6 text-lg">
               <li>
-                <Link to="/" className="py-4 block">
+                <Link to="/" className="py-4 block" onClick={handleMenuClose}>
                   <Home className="h-5 w-5" />
                 </Link>
               </li>
               <li>
-                <Link to="/board-school" className="py-2">
+                <Link to="/board-school" className="py-2" onClick={handleMenuClose}>
                   Boarding School
                 </Link>
               </li>
               <li>
-                <Link to="/day-school" className="py-2">
+                <Link to="/day-school" className="py-2" onClick={handleMenuClose}>
                   Day School
                 </Link>
               </li>
               <li>
-                <Link to="/pre-schools" className="py-2">
+                <Link to="/pre-schools" className="py-2" onClick={handleMenuClose}>
                   Pre Schools
                 </Link>
               </li>
               <li>
-                <Link to="/register-school" className="py-2">
+                <Link to="/register-school" className="py-2" onClick={handleMenuClose}>
                   Register School
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="py-2">
+                <Link to="/blog" className="py-2" onClick={handleMenuClose}>
                   Blog
                 </Link>
               </li>
-              
             </ul>
           </motion.div>
         </div>
