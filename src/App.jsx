@@ -12,7 +12,8 @@ import DaySchool from "./components/DaySchool";
 import PreSchool from "./components/PreSchool";
 import Register from "./components/Register";
 import RegisterD from "./components/RegisterD";
-
+import Login from "./components/Login";
+import UserRegister from "./components/UserRegister";
 
 function App() {
   return (
@@ -36,7 +37,9 @@ function App() {
           </>
         } />
         
-        
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<UserRegister />} />
         <Route path="/board-school" element={<BoardingSchool />} />
         <Route path="/day-school" element={<DaySchool />} />
         <Route path="/pre-schools" element={<PreSchool />} />
