@@ -36,7 +36,7 @@ function App() {
           </>
         } />
         
-      
+        
         <Route path="/board-school" element={<BoardingSchool />} />
         <Route path="/day-school" element={<DaySchool />} />
         <Route path="/pre-schools" element={<PreSchool />} />
