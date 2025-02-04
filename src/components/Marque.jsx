@@ -14,7 +14,8 @@ function Marque() {
         <motion.div
           initial={{ x: 100}}
           animate={{ x: "-100%" }}
-          transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+          whileHover={{ x: "" }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 90 }}
           className='flex'
           style={{ whiteSpace: 'nowrap' }}
         >

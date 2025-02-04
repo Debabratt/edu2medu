@@ -20,9 +20,9 @@ const UserRegister = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen mt-10 flex items-center justify-center  bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-4 text-center">Register</h2>
+        <h2 className="text-2xl font-bold mb-4  text-center">Register</h2>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -92,7 +92,7 @@ const UserRegister = () => {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full py-2 text-white font-semibold rounded-md ${loading ? 'bg-gray-400' : 'bg-[#17A2B8] hover:bg-[#17a3b8c9]'} transition duration-300`}
+            className={`w-full py-2 text-white font-semibold rounded-md ${loading ? 'bg-gray-400' : 'bg-[#E76F51] hover:bg-[#774e44]'} transition duration-300`}
           >
             {loading ? 'Registering...' : 'Register'}
           </button>

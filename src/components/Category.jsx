@@ -137,6 +137,7 @@ const Category = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
+
           >
             <Carousel
               responsive={{
@@ -160,6 +161,8 @@ const Category = () => {
               infinite={true}
               autoPlay={true}
               autoPlaySpeed={3000}
+              showDots={false} // Hide dots
+              arrows={false}
             >
               {additionalServices.map((service, index) => (
                 <motion.div
