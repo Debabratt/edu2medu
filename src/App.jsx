@@ -29,6 +29,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
+        {/* Home Route */}
         <Route
           path="/"
           element={
@@ -44,6 +45,7 @@ function App() {
           }
         />
 
+        {/* Healthcare Route */}
         <Route
           path="/healthcare"
           element={
@@ -59,29 +61,35 @@ function App() {
           }
         />
 
-        <Route path="/register" element={<UserRegister />} />
-        <Route path="/registermedical" element={<UserRegisterM />} />
-        <Route path="/login" element={<Login />} />
+        {/* Register and Login Routes */}
+        <Route path="/register" element={<> <UserRegister /><Footer/></>}/>
+        <Route path="/registermedical" element={<><UserRegisterM /><Footer/></>} />
+        <Route path="/login" element={<><Login /> <Footer/></>} />
+
+        {/* School and Boarding Routes */}
         <Route path="/board-school" element={<BoardingSchool />} />
         <Route path="/day-school" element={<DaySchool />} />
         <Route path="/pre-schools" element={<PreSchool />} />
 
-        {/* Corrected Register School Route */}
+        {/* Register School Route */}
         <Route
           path="/register-school"
           element={
             <>
               <Register />
               <RegisterD />
+              <Footer />
             </>
           }
         />
 
-        {/* Moved /hospitals Route Outside */}
-        <Route path="/hospitals" element={<><MedicalCl />  <Footer /></>} />
-        <Route path="/contact" element={<><HContact />  <Footer /></>} />
-        <Route path="/school" element={<><DaySchoolM /> <Footer /></>} />
-        <Route path="/news" element={<><News /> <Footer /></>} />
+        {/* Hospitals Route */}
+        <Route path="/hospitals" element={<><MedicalCl /><Footer /></>} />
+
+        {/* Other Routes */}
+        <Route path="/contact" element={<><HContact /><Footer /></>} />
+        <Route path="/school" element={<><DaySchoolM /><Footer /></>} />
+        <Route path="/news" element={<><News /><Footer /></>} />
       </Routes>
     </Router>
   );
