@@ -18,7 +18,7 @@ const Home = () => {
         >
           <source src="v2.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black opacity-70" />
+        <div className="absolute inset-0 bg-black opacity-30" /> {/* Set opacity to 30 */}
       </div>
 
       {/* Buttons to Toggle Content */}
