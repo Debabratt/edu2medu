@@ -84,7 +84,7 @@ export default function Header() {
               </li>
               <li>
                 <Link to="/school" className="py-4 block">
-                  School
+                  EduHub
                 </Link>
               </li>
               <li>
@@ -130,7 +130,7 @@ export default function Header() {
               </li>
               <li>
                 <Link to="/school" className="py-2" onClick={() => setMenuOpen(false)}>
-                  School
+                  EduHub
                 </Link>
               </li>
               <li>

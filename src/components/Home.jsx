@@ -76,7 +76,7 @@ const Home = () => {
           }`}
           onClick={() => handleCategoryChange("Education")}
         >
-          Education
+          EduHub
         </button>
         <button
           className={`px-6 py-2 rounded-md text-lg font-bold transition-all ${
