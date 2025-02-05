@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-8">
@@ -14,10 +16,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul>
-              <li><a href="#" className="text-sm text-gray-400 hover:text-white">Home</a></li>
-              <li><a href="#" className="text-sm text-gray-400 hover:text-white">Services</a></li>
-              <li><a href="#" className="text-sm text-gray-400 hover:text-white">About</a></li>
-              <li><a href="#" className="text-sm text-gray-400 hover:text-white">Contact</a></li>
+              <li><Link to={"#"} className="text-sm text-gray-400 hover:text-white">Home</Link></li>
+              <li><Link to={"#"} className="text-sm text-gray-400 hover:text-white">Services</Link></li>
+              <li><Link to={"#"} className="text-sm text-gray-400 hover:text-white">About</Link></li>
+              <li><Link to={"#"} className="text-sm text-gray-400 hover:text-white">Contact</Link></li>
             </ul>
           </div>
 
@@ -32,8 +34,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Registration</h3>
             <ul>
-              <li><a href="/register" className="text-sm text-gray-400 hover:text-white">Register School</a></li>
-              <li><a href="/registermedical" className="text-sm text-gray-400 hover:text-white">Register Hospitals</a></li>
+              <li><Link to={"/register"} className="text-sm text-gray-400 hover:text-white">Register School</Link></li>
+              <li><Link to={"/registermedical"} className="text-sm text-gray-400 hover:text-white">Register Hospitals</Link></li>
             </ul>
           </div>
         </div>
@@ -41,9 +43,9 @@ const Footer = () => {
         <div className="border-t border-gray-600 mt-8 pt-4">
           <p className="text-center text-sm text-gray-400">
             &copy; 2025 All Rights Reserved. 
-            <a href="https://websyonline.com/" target="_blank" rel="noopener noreferrer" className=" hover:underline ml-1">
+            <Link to={"https://websyonline.com/"} target="_blank" rel="noopener noreferrer" className=" hover:underline ml-1">
               WebsyOnline
-            </a>
+            </Link>
           </p>
         </div>
       </div>

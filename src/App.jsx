@@ -67,8 +67,8 @@ function App() {
         <Route path="/login" element={<><Login /> <Footer/></>} />
 
         {/* School and Boarding Routes */}
-        <Route path="/board-school" element={<BoardingSchool />} />
-        <Route path="/day-school" element={<DaySchool />} />
+        <Route path="/board-school" element={<><Header/><BoardingSchool /><Footer/></>} />
+        <Route path="/day-school" element={<><Header/><DaySchool /><Footer/></>} />
         <Route path="/pre-schools" element={<PreSchool />} />
 
         {/* Register School Route */}

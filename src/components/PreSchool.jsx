@@ -2,9 +2,9 @@ import { Heart, Eye } from "lucide-react";
 
 function PreSchool() {
   return (
-    <div className="min-h-screen mt-30 bg-gray-100 flex flex-col lg:flex-row py-10 px-5">
+    <div className="min-h-screen bg-gray-100 flex flex-col lg:flex-row py-10 px-5">
       {/* Left side filter box */}
-      <div className="lg:w-1/4 w-full mt-30 bg-white p-6 rounded-lg shadow-lg sticky top-0 h-auto lg:h-screen">
+      <div className="lg:w-1/4 w-full bg-white p-6 rounded-lg shadow-lg sticky top-0 h-auto lg:h-screen">
         <h2 className="text-2xl font-semibold text-blue-600 mb-3">Filter</h2>
         <div className="space-y-4">
           <div>
