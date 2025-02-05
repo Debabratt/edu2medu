@@ -20,7 +20,7 @@ const UserRegisterM = () => {
   };
 
   return (
-    <div className="flex mt-40 items-center justify-center bg-gray-100 px-3 py-6">
+    <div className="flex mt-35 items-center justify-center bg-gray-100 px-3 py-6">
       <div className="bg-white p-4 rounded-md shadow-md w-full max-w-xs h-auto min-h-[350px] flex flex-col justify-center">
         <h2 className="text-sm font-semibold mb-2 text-center">Register</h2>
 

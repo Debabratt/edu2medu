@@ -4,34 +4,33 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginType, setLoginType] = useState('education'); // Added state for toggle
+  const [loginType, setLoginType] = useState('education');
   const navigate = useNavigate();
 
-  // Function to navigate to the appropriate register page based on login type
   const handleRegisterNavigate = () => {
     if (loginType === 'education') {
-      navigate('/register'); // Education register page
+      navigate('/register');
     } else {
-      navigate('/registermedical'); // Healthcare register page
+      navigate('/registermedical');
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
-        <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+    <div className="flex mt-35 items-center justify-center bg-gray-100 px-4 py-6">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-sm h-auto min-h-[350px] flex flex-col justify-center">
+        <h2 className="text-xl font-bold mb-3 text-center">Login</h2>
 
         {/* Toggle Buttons for Education and Healthcare */}
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-3">
           <button
             onClick={() => setLoginType('education')}
-            className={`px-4 py-2 rounded-l-md ${loginType === 'education' ? 'bg-[#E76F51] text-white' : 'bg-gray-200 text-gray-600'} transition duration-300`}
+            className={`px-4 py-1 rounded-l-md text-sm ${loginType === 'education' ? 'bg-[#E76F51] text-white' : 'bg-gray-200 text-gray-600'} transition duration-300`}
           >
             Education
           </button>
           <button
             onClick={() => setLoginType('healthcare')}
-            className={`px-4 py-2 rounded-r-md ${loginType === 'healthcare' ? 'bg-[#17A2B8] text-white' : 'bg-gray-200 text-gray-600'} transition duration-300`}
+            className={`px-4 py-1 rounded-r-md text-sm ${loginType === 'healthcare' ? 'bg-[#17A2B8] text-white' : 'bg-gray-200 text-gray-600'} transition duration-300`}
           >
             Healthcare
           </button>
@@ -39,26 +38,26 @@ const Login = () => {
 
         {/* Input Fields for Email and Password */}
         <form>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 font-medium">Email</label>
+          <div className="mb-3">
+            <label htmlFor="email" className="block text-gray-700 text-xs font-medium">Email</label>
             <input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-1 border rounded-md text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-700 font-medium">Password</label>
+          <div className="mb-3">
+            <label htmlFor="password" className="block text-gray-700 text-xs font-medium">Password</label>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-3 py-1 border rounded-md text-xs focus:outline-none focus:ring-1 focus:ring-blue-400"
               required
             />
           </div>
@@ -66,18 +65,18 @@ const Login = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className={`w-full py-2 text-white font-semibold rounded-md ${loginType === 'education' ? 'bg-[#E76F51] hover:bg-[#9f6b5e]' : 'bg-[#17A2B8] hover:bg-[#70aeb8]'} transition duration-300`}
+            className={`w-full mx-auto px-20 py-2 text-white text-xs font-semibold rounded-md ${loginType === 'education' ? 'bg-[#E76F51] hover:bg-[#9f6b5e]' : 'bg-[#17A2B8] hover:bg-[#70aeb8]'} transition duration-300`}
           >
             Login
           </button>
         </form>
 
         {/* Register link */}
-        <div className="mt-4 text-center">
-          <p className="text-sm text-gray-600">
+        <div className="mt-2 text-center">
+          <p className="text-xs text-gray-600">
             Don't have an account?{' '}
             <button
-              onClick={handleRegisterNavigate} // Dynamically navigate based on login type
+              onClick={handleRegisterNavigate}
               className="text-[#E76F51] hover:underline"
             >
               Register Now
