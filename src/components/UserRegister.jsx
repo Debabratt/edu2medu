@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const UserRegister = () => {
   const [name, setName] = useState('');
@@ -12,7 +13,6 @@ const UserRegister = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulating a delay for UX purposes
     setTimeout(() => {
       alert('Registration Successful!');
       setLoading(false);
@@ -20,69 +20,69 @@ const UserRegister = () => {
   };
 
   return (
-    <div className="min-h-screen mt-10 flex items-center justify-center  bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-4  text-center">Register</h2>
+    <div className="flex mt-40 items-center justify-center bg-gray-100 px-3 py-6">
+      <div className="bg-white p-4 rounded-md shadow-md w-full max-w-xs h-auto min-h-[350px] flex flex-col justify-center">
+        <h2 className="text-sm font-semibold mb-2 text-center">Register</h2>
 
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700">Name</label>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+          <div>
+            <label htmlFor="name" className="block text-xs text-gray-700">Name</label>
             <input
               type="text"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-2 py-1 border rounded text-xs focus:ring-1 focus:ring-blue-400"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700">Email</label>
+          <div>
+            <label htmlFor="email" className="block text-xs text-gray-700">Email</label>
             <input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-2 py-1 border rounded text-xs focus:ring-1 focus:ring-blue-400"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-700">Password</label>
+          <div>
+            <label htmlFor="password" className="block text-xs text-gray-700">Password</label>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-2 py-1 border rounded text-xs focus:ring-1 focus:ring-blue-400"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="phone" className="block text-gray-700">Phone</label>
+          <div>
+            <label htmlFor="phone" className="block text-xs text-gray-700">Phone</label>
             <input
               type="text"
               id="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-2 py-1 border rounded text-xs focus:ring-1 focus:ring-blue-400"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="gender" className="block text-gray-700">Gender</label>
+          <div>
+            <label htmlFor="gender" className="block text-xs text-gray-700">Gender</label>
             <select
               id="gender"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-2 py-1 border rounded text-xs focus:ring-1 focus:ring-blue-400"
               required
             >
-              <option value="">Select Gender</option>
+              <option value="">Select</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
@@ -92,11 +92,18 @@ const UserRegister = () => {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full py-2 text-white font-semibold rounded-md ${loading ? 'bg-gray-400' : 'bg-[#E76F51] hover:bg-[#774e44]'} transition duration-300`}
+            className={`w-full py-1 text-white text-xs font-medium rounded ${loading ? 'bg-gray-400' : 'bg-[#d9631e] hover:bg-[#d9631ec6]'} transition duration-300`}
           >
             {loading ? 'Registering...' : 'Register'}
           </button>
         </form>
+
+        <p className="mt-2 text-xs text-center text-gray-600">
+          Already have an account?{' '}
+          <Link to="/login" className="text-[#d9631e] hover:underline">
+            Login
+          </Link>
+        </p>
       </div>
     </div>
   );

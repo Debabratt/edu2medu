@@ -78,7 +78,7 @@ const Login = () => {
             Don't have an account?{' '}
             <button
               onClick={handleRegisterNavigate} // Dynamically navigate based on login type
-              className="text-blue-500 hover:underline"
+              className="text-[#E76F51] hover:underline"
             >
               Register Now
             </button>

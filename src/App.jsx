@@ -23,6 +23,7 @@ import MedicalCl from "./components/MedicalCl";
 import DaySchoolM from "./components/DaySchoolM";
 import News from "./components/News";
 import UserRegisterM from "./components/UserRegisterM";
+import FooterR from "./components/FooterR";
 
 function App() {
   return (
@@ -62,9 +63,9 @@ function App() {
         />
 
         {/* Register and Login Routes */}
-        <Route path="/register" element={<> <UserRegister /><Footer/></>}/>
-        <Route path="/registermedical" element={<><UserRegisterM /><Footer/></>} />
-        <Route path="/login" element={<><Login /> <Footer/></>} />
+        <Route path="/register" element={<> <UserRegister /><FooterR/></>}/>
+        <Route path="/registermedical" element={<><UserRegisterM /><FooterR/></>} />
+        <Route path="/login" element={<><Login /> <FooterR/></>} />
 
         {/* School and Boarding Routes */}
         <Route path="/board-school" element={<><Header/><BoardingSchool /><Footer/></>} />
