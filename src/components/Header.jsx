@@ -42,27 +42,29 @@ export default function Header() {
         <div className="w-[40%] bg-[#17A2B8] flex justify-end items-center px-6 text-white relative before:absolute before:top-0 before:left-[-20px] before:w-12 before:h-full before:bg-white before:skew-x-[-30deg]">
           <div className="flex items-center gap-6 lg:px-10">
             {/* Animated Phone Number */}
-            <div className="hidden md:flex items-center gap-2 px-6">
-              <motion.div
-                animate={{ rotate: [-10, 10, -10] }}
-                transition={{ repeat: Infinity, duration: 0.5, ease: "easeInOut" }}
-              >
-                <Phone className="h-6 w-6 text-white" />
-              </motion.div>
-              <motion.span
-                className="text-lg lg:text-2xl font-bold"
-                initial={{ scale: 1 }}
-                animate={{ scale: [1, 1.1, 1] }}
-                transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
-              >
-                +91 9811247700
-              </motion.span>
-            </div>
+           {/* Animated Phone Number */}
+<div className="hidden md:flex items-center gap-2 px-6">
+  <motion.div
+    animate={{ rotate: [-10, 10, -10] }}
+    transition={{ repeat: Infinity, duration: 0.5, ease: "easeInOut" }}
+  >
+    <Phone className="h-6 w-6 text-white" />
+  </motion.div>
+  <motion.a
+    href="tel:+919811247700"
+    className="text-lg lg:text-2xl font-bold"
+    initial={{ scale: 1 }}
+    animate={{ scale: [1, 1.1, 1] }}
+    transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+  >
+    +91 9811247700
+  </motion.a>
+</div>
 
             {/* Login Button */}
             <button
               onClick={handleLoginClick}
-              className="px-4 py-1.5 text-sm border border-white font-bold rounded hover:bg-white hover:text-blue-500 transition"
+              className="px-4 py-1.5 text-sm border border-white font-bold rounded hover:bg-white hover:text-[#17A2B8] transition"
             >
               Login
             </button>

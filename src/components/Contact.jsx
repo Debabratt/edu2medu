@@ -6,7 +6,7 @@ const Contact = () => {
 
   return (
     <div
-      className="h-screen flex items-center justify-center bg-cover bg-center"
+      className="h-full flex items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage: "url('/contact.jpg')", // Make sure your image is in the public folder
       }}
@@ -18,7 +18,7 @@ const Contact = () => {
             backgroundImage: "url('/contact.jpg')", // Keeps the background image for this div
           }}
         >
-          <div className="bg-opacity-70 bg-[#1E2939] px-8 py-10 rounded-lg max-w-lg w-full shadow-xl">
+          <div className="bg-opacity-70  bg-[#1E2939] px-8 py-10 rounded-lg max-w-lg w-full shadow-xl">
             <h1 className="text-3xl sm:text-4xl font-bold text-white">
               Feel Free to Contact <span className="text-[#e69721]">Us</span>
             </h1>
