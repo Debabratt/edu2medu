@@ -10,7 +10,7 @@ export default function HContact() {
  
 
   return (
-    <div className="container mx-auto px-4 md:px-14 mb-20 bg-gradient-to-r from-white to-[#c4ecf6]">
+    <div className="container mx-auto px-4 md:px-14  bg-gradient-to-r from-white to-[#c4ecf6]">
       <div className="grid mt-23 gap-6 sm:grid-cols-1 px-8 md:grid-cols-2 lg:grid-cols-3">
         {/* Email Card */}
         <motion.div
