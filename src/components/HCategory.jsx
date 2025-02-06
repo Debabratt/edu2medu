@@ -74,7 +74,7 @@ const HCategory = () => {
             alt="Government Hospital"
             className="w-full h-32 object-cover rounded-t-md"
           />
-          <h2 className="text-lg font-bold text-gray-800 mt-3">Government Hospital</h2>
+          <h2 className="text-lg font-bold text-gray-800 mt-3"> Hospitals</h2>
           <p className="text-gray-600 text-sm mt-1">
             {truncateText(
               "Comprehensive medical care available to all citizens."
@@ -87,7 +87,7 @@ const HCategory = () => {
             alt="Private Hospital"
             className="w-full h-32 object-cover rounded-t-md"
           />
-          <h2 className="text-lg font-bold text-gray-800 mt-3">Private Hospital</h2>
+          <h2 className="text-lg font-bold text-gray-800 mt-3">Private Clinics</h2>
           <p className="text-gray-600 text-sm mt-1">
             {truncateText(
               "Premium healthcare services with advanced technology."

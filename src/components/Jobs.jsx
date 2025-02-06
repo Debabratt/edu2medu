@@ -1,6 +1,6 @@
 const Jobs = () => {
     return (
-      <div className="bg-gradient-to-r mt-32 from-white to-[#8dd3dc] py-16">
+      <div className="bg-gradient-to-r mt-24 from-white to-[#8dd3dc] py-16">
         <div className="container mx-auto px-4 md:px-14 lg:px-20">
           {/* Careers Section */}
           <div className="flex flex-col lg:flex-row items-center justify-between mb-12">
