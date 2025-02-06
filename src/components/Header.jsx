@@ -109,7 +109,7 @@ export default function Header() {
               </li>
               <li className="ml-auto">
                 <Link to="/jobs" className="py-4 block">
-                 Jobs
+                 Careers
                 </Link>
               </li>
             </ul>
@@ -162,7 +162,7 @@ export default function Header() {
               <li>
                 
                 <Link to="/jobs" className="py-2" onClick={() => setMenuOpen(false)}>
-              jobs
+           Careers
                 </Link>
               </li>
               

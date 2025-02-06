@@ -1,22 +1,22 @@
 const Jobs = () => {
     return (
       <div className="bg-gradient-to-r mt-32 from-white to-[#8dd3dc] py-16">
-        <div className="container mx-auto px-4 md:px-8 lg:px-20">
+        <div className="container mx-auto px-4 md:px-14 lg:px-20">
           {/* Careers Section */}
           <div className="flex flex-col lg:flex-row items-center justify-between mb-12">
             {/* Text Section */}
-            <div className="w-full lg:w-1/2 px-4">
-              <h1 className="text-4xl font-bold text-gray-800 mb-4">Careers</h1>
-              <p className="text-lg text-gray-600">
+            <div className="w-full  md:px-14 lg:w-1/2 ">
+              <h1 className="text-4xl px-14 font-bold text-gray-800 mb-4">Careers</h1>
+              <p className="text-lg px-14 text-gray-600">
                 Join Our Growing Team at Edu2Medu
               </p>
-              <p className="mt-4 font-serif text-lg text-gray-600">
+              <p className="mt-4 px-14 font-serif text-lg text-gray-600">
                 Are you passionate about education and healthcare? At Edu2Medu, we are committed to providing quality education and healthcare services. If you’re ready to make a meaningful impact and join our dynamic team, we would love to hear from you!
               </p>
             </div>
   
             {/* Image Section */}
-            <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+            <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-10">
               <img
                 src="ab.jpg"
                 alt="Edu2Medu Careers"
@@ -25,36 +25,38 @@ const Jobs = () => {
             </div>
           </div>
   
+       
           {/* Why Work With Edu2Medu Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-4">Collaborative Environment</h3>
-              <p className="text-lg text-gray-600">
-                We foster a collaborative environment to deliver excellent education and healthcare services.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-4">Growth Opportunities</h3>
-              <p className="text-lg text-gray-600">
-                Develop your skills and advance your career in education and healthcare through mentorship and training.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-4">Exciting Projects</h3>
-              <p className="text-lg text-gray-600">
-                Work on impactful projects that make a difference in the education and healthcare sectors.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-4">Flexible Work Culture</h3>
-              <p className="text-lg text-gray-600">
-                Enjoy a healthy work-life balance with our flexible work policies.
-              </p>
-            </div>
-          </div>
+<div className="grid grid-cols-1 mt-30 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 px-4 md:px-14 lg:px-20">
+  <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <h3 className="text-2xl font-serif text-gray-800 mb-4">Collaborative Environment</h3>
+    <p className="text-lg text-gray-600">
+      We foster a collaborative environment to deliver excellent education and healthcare services.
+    </p>
+  </div>
+  <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <h3 className="text-2xl font-serif text-gray-800 mb-4">Growth Opportunities</h3>
+    <p className="text-lg text-gray-600">
+      Develop your skills and advance your career in education and healthcare through mentorship and training.
+    </p>
+  </div>
+  <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <h3 className="text-2xl font-serif text-gray-800 mb-4">Exciting Projects</h3>
+    <p className="text-lg text-gray-600">
+      Work on impactful projects that make a difference in the education and healthcare sectors.
+    </p>
+  </div>
+  <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+    <h3 className="text-2xl font-serif text-gray-800 mb-4">Flexible Work Culture</h3>
+    <p className="text-lg text-gray-600">
+      Enjoy a healthy work-life balance with our flexible work policies.
+    </p>
+  </div>
+</div>
+
   
           {/* Open Positions Section */}
-          <div>
+          <div className="px-4 md:px-14 mt-20 mb-20 lg:px-20">
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Open Positions</h2>
   
             {/* Grid Layout for Jobs */}
