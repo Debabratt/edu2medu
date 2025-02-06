@@ -58,7 +58,7 @@ const About = () => {
             <motion.img
               src="student.jpg"
               alt="Educational items illustration"
-              className="object-cover rounded-full shadow-2xl w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[350px] lg:h-[350px] border-4 border-transparent bg-clip-border hover:ring-8 hover:ring-[#17a2b8] transform transition-all duration-300 ease-in-out"
+              className="object-cover rounded-full mt-20 shadow-2xl w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[350px] lg:h-[350px] border-4 border-transparent bg-clip-border hover:ring-8 hover:ring-[#17a2b8] transform transition-all duration-300 ease-in-out"
               whileHover={{ scale: 1.1 }}
             />
           </motion.div>
