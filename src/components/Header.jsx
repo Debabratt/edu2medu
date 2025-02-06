@@ -98,8 +98,18 @@ export default function Header() {
                 </Link>
               </li>
               <li className="ml-auto">
+                <Link to="/about" className="py-4 block">
+                 About Us
+                </Link>
+              </li>
+              <li className="ml-auto">
                 <Link to="/contact" className="py-4 block">
                   Contact
+                </Link>
+              </li>
+              <li className="ml-auto">
+                <Link to="/jobs" className="py-4 block">
+                 Jobs
                 </Link>
               </li>
             </ul>
@@ -143,6 +153,20 @@ export default function Header() {
                   News
                 </Link>
               </li>
+              <li>
+                
+                <Link to="/about" className="py-2" onClick={() => setMenuOpen(false)}>
+                About Us
+                </Link>
+              </li>
+              <li>
+                
+                <Link to="/jobs" className="py-2" onClick={() => setMenuOpen(false)}>
+              jobs
+                </Link>
+              </li>
+              
+
               <li>
                 <Link to="/contact" className="py-2" onClick={() => setMenuOpen(false)}>
                   Contact

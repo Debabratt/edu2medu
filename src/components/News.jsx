@@ -29,7 +29,7 @@ const News = () => {
   return (
     <div>
       {/* Fixed Header Section */}
-      <div className="fixed top-0 left-0 right-0 bg-gray-100 py-12 px-6 z-10 lg:mt-20 sm:mt-10">
+      <div className="fixed top-0 left-0 right-0 bg-white py-12 px-6 z-10 lg:mt-20 sm:mt-10">
       </div>
       <div className="max-w-6xl lg:mt-45 sm:mt-50 mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 text-center mb-10">

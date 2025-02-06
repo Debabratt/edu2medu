@@ -24,6 +24,8 @@ import DaySchoolM from "./components/DaySchoolM";
 import News from "./components/News";
 import UserRegisterM from "./components/UserRegisterM";
 import FooterR from "./components/FooterR";
+import Jobs from "./components/Jobs";
+import About from "./components/About";
 
 function App() {
   return (
@@ -65,7 +67,7 @@ function App() {
         {/* Register and Login Routes */}
         <Route path="/register" element={<> <UserRegister /><FooterR/></>}/>
         <Route path="/registermedical" element={<><UserRegisterM /><FooterR/></>} />
-        <Route path="/login" element={<><Login /> <FooterR/></>} />
+        <Route path="/login" element={<><Login /> <Footer/></>} />
 
         {/* School and Boarding Routes */}
         <Route path="/board-school" element={<><Header/><BoardingSchool /><Footer/></>} />
@@ -88,6 +90,8 @@ function App() {
         <Route path="/hospitals" element={<><MedicalCl /><Footer /></>} />
 
         {/* Other Routes */}
+        <Route path="/jobs" element={<><Jobs /><Footer /></>} />
+        <Route path="/about" element={<><About /><Footer /></>} />
         <Route path="/contact" element={<><HContact /><Footer /></>} />
         <Route path="/school" element={<><DaySchoolM /><Footer /></>} />
         <Route path="/news" element={<><News /><Footer /></>} />
