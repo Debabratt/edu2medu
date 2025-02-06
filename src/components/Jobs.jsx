@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Jobs = () => {
     return (
       <div className="bg-gradient-to-r mt-24 from-white to-[#8dd3dc] py-16">
@@ -16,13 +18,19 @@ const Jobs = () => {
             </div>
   
             {/* Image Section */}
-            <div className="w-full lg:w-1/2 flex justify-center mt-8 lg:mt-10">
-              <img
-                src="ab.jpg"
-                alt="Edu2Medu Careers"
-                className="rounded-lg shadow-lg w-80 h-80 object-cover"
-              />
-            </div>
+            <motion.div 
+            initial={{ opacity: 0, scale: 0.5 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ duration: 1, type: "spring", stiffness: 80 }}
+            className="lg:w-1/2 flex justify-center relative"
+          >
+            <motion.img
+              src="ab.jpg"
+              alt="Educational items illustration"
+              className="object-cover rounded-full mt-20 shadow-2xl w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[350px] lg:h-[350px] border-4 border-transparent bg-clip-border hover:ring-8 hover:ring-[#17a2b8] transform transition-all duration-300 ease-in-out"
+              whileHover={{ scale: 1.1 }}
+            />
+          </motion.div>
           </div>
   
        

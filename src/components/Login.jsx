@@ -27,7 +27,7 @@ const Login = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: 'spring', stiffness: 100, duration: 0.8 }}
       >
-        <h2 className="text-xl font-bold mb-4 text-center text-[#E76F51]">Login</h2>
+        <h2 className="text-xl font-serif mb-4 text-center text-[#E76F51]">Login</h2>
 
         <div className="flex justify-center mb-4">
           <motion.button

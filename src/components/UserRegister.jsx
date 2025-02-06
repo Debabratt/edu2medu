@@ -113,9 +113,9 @@ const UserRegister = () => {
           </motion.button>
         </form>
 
-        <p className="mt-2 text-xs font-serif text-center text-gray-600">
+        <p className="mt-2 text-xs font-medium text-center text-gray-600">
           Already have an account?{' '}
-          <Link to="/login" className="text-[#E76F51] font-serif hover:underline">
+          <Link to="/login" className="text-[#E76F51] font-medium hover:underline">
             Login
           </Link>
         </p>
