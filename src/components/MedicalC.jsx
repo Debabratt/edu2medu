@@ -82,7 +82,7 @@ function MedicalC(){
       {/* Government Medical Facilities Carousel */}
       <div className="bg-gray-100 p-8 mt-5">
         <header className="mb-8">
-          <h1 className="h text-3xl font-bold text-gray-800 text-left pl-4 lg:pl-16">Government Hospitals</h1>
+          <h1 className="h text-3xl font-bold text-gray-800 text-left pl-4 lg:pl-16"> Hospitals</h1>
         </header>
         <main className="px-4 md:px-8 lg:px-16 py-5">
           <Carousel 
@@ -118,7 +118,7 @@ function MedicalC(){
       {/* Private Medical Facilities Carousel */}
       <div className="bg-gray-100 p-8 mt-5">
         <header className="mb-8">
-          <h1 className="h text-3xl font-bold text-gray-800 text-left pl-4 lg:pl-16">Private  Hospitals</h1>
+          <h1 className="h text-3xl font-bold text-gray-800 text-left pl-4 lg:pl-16"> Private Clinics </h1>
         </header>
         <main className="px-4 md:px-8 lg:px-16 py-5">
           <Carousel 

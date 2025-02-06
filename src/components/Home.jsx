@@ -30,7 +30,7 @@ const Home = () => {
     "Coaching Centre",
     "Private Tutor",
   ];
-  const healthcareOptions = ["Hospitals", "Private Clinics", "Medical Stores"];
+  const healthcareOptions = ["Hospitals", "Private Clinics", "Medical Store's"];
 
   return (
     <div className="relative w-full bg-black min-h-screen flex flex-col items-center justify-center overflow-hidden">
