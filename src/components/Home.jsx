@@ -79,14 +79,17 @@ const Home = () => {
         transition={{ duration: 1, type: "spring", stiffness: 100 }}
       >
         <span
-          className={`bg-gradient-to-r from-white to-${
-            selectedCategory === "Education" ? "[#E76F51]" : "[#17A2B8]"
-          } text-transparent bg-clip-text`}
-        >
-          {selectedCategory === "Education"
-            ? "Find Your Dream School!"
-            : "Find Your Trusted Healthcare!"}
-        </span>
+  className={`bg-gradient-to-r from-white ${
+    selectedCategory === "Education"
+      ? "to-[#E76F51]"
+      : "to-[#17A2B8]"
+  } bg-clip-text text-transparent`}
+>
+  {selectedCategory === "Education"
+    ? "Find Your Dream School!"
+    : "Find Your Trusted Healthcare!"}
+</span>
+
       </motion.h1>
 
       {/* Search Bar */}
