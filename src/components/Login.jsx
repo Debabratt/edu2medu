@@ -19,13 +19,13 @@ const Login = () => {
   };
 
   return (
-    <div className="relative min-h-[550px]">
-      <motion.div
-        className="mt-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-xl z-10 w-full max-w-md"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: 'spring', stiffness: 100, duration: 0.8 }}
-      >
+    <div className="relative mt-10  min-h-[550px]">
+     <motion.div
+  className="mt-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 sm:p-8 rounded-lg shadow-2xl z-10 w-full max-w-xs sm:max-w-sm md:max-w-md"
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ type: 'spring', stiffness: 100, duration: 0.8 }}
+>
         <h2 className="text-xl font-bold mb-3 text-center">Login</h2>
 
         <div className="flex justify-center mb-3">
