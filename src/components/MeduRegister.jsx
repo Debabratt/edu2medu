@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const UserRegisterM = () => {
+const MeduRegister = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -126,4 +126,4 @@ const UserRegisterM = () => {
   );
 };
 
-export default UserRegisterM;
+export default MeduRegister;

@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import axios from "axios"; // ✅ Import axios for API calls
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginType, setLoginType] = useState("education");
+  const [error, setError] = useState(null); // ✅ Handle errors
+  const [loading, setLoading] = useState(false); // ✅ Handle loading state
   const navigate = useNavigate();
 
   const handleRegisterNavigate = () => {
@@ -14,14 +17,36 @@ const Login = () => {
 
   const handleForgotPasswordNavigate = () => {
     navigate(
-      loginType === "education"
-        ? "/forgot-password"
-        : "/forgot-password-medical"
+      loginType === "education" ? "/forgot-password" : "/forgot-password-medical"
     );
   };
 
   const handleAdminNavigate = () => {
-    navigate("/admin-login"); // ✅ Admin ke liye navigate route
+    navigate("/admin-login");
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError(null);
+    setLoading(true);
+
+    try {
+      const { data } = await axios.post("http://localhost:8002/user/login", {
+        email,
+        password,
+      });
+
+      if (data.success) {
+        localStorage.setItem("user", JSON.stringify(data.user)); // ✅ Save user data
+        navigate("/dashboard"); // ✅ Redirect after successful login
+      } else {
+        setError(data.message); // Show error message
+      }
+    } catch (err) {
+      setError(err.response?.data?.message || "Server error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -70,7 +95,7 @@ const Login = () => {
           </motion.button>
         </div>
 
-        {/* ✅ Admin Login Button */}
+        {/* Admin Login Button */}
         <div className="flex justify-center mb-6">
           <motion.button
             onClick={handleAdminNavigate}
@@ -82,7 +107,9 @@ const Login = () => {
           </motion.button>
         </div>
 
-        <form>
+        {error && <p className="text-red-500 text-xs text-center">{error}</p>} {/* ✅ Show error message */}
+
+        <form onSubmit={handleLogin}>
           <div className="mb-4 mt-2">
             <label
               htmlFor="email"
@@ -128,8 +155,9 @@ const Login = () => {
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            disabled={loading} // ✅ Disable button when loading
           >
-            Login
+            {loading ? "Logging in..." : "Login"}
           </motion.button>
         </form>
 

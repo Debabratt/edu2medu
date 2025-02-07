@@ -13,7 +13,7 @@ import PreSchool from "./components/PreSchool";
 import Register from "./components/Register";
 import RegisterD from "./components/RegisterD";
 import Login from "./components/Login";
-import UserRegister from "./components/UserRegister";
+
 import HMarque from "./components/HMarque";
 import HCategory from "./components/HCategory";
 import HStatistics from "./components/HStatistics";
@@ -22,12 +22,15 @@ import MedicalC from "./components/MedicalC";
 import MedicalCl from "./components/MedicalCl";
 import DaySchoolM from "./components/DaySchoolM";
 import News from "./components/News";
-import UserRegisterM from "./components/UserRegisterM";
+
 
 import Jobs from "./components/Jobs";
 import About from "./components/About";
 import Medulogin from "./components/Medulogin";
 import Adminlogin from "./components/Adminlogin";
+import EduRegister from "./components/EduRegister";
+import MeduRegister from "./components/MeduRegister";
+import Userdash from "./components/Userdash";
 
 
 function App() {
@@ -68,10 +71,10 @@ function App() {
         />
 
         {/* Register and Login Routes */}
-        <Route path="/register" element={<> <UserRegister /><Footer/></>}/>
-        <Route path="/registermedical" element={<><UserRegisterM /><Footer/></>} />
+        <Route path="/register" element={<> <EduRegister /><Footer/></>}/>
+        <Route path="/registermedical" element={<><MeduRegister /><Footer/></>} />
         <Route path="/login" element={<><Login /> <Footer/></>} />
-       
+        <Route path="/dashboard" element={<Userdash /> } />
         <Route path="/healthcarelogin" element={<><Medulogin /> <Footer/></>} />
         <Route path="/admin-login" element={<><Adminlogin /> <Footer/></>} />
 
@@ -85,7 +88,7 @@ function App() {
 
         {/* Register School Route */}
         <Route
-          path="/register-school"
+          path="/register"
           element={
             <>
               <Register />
