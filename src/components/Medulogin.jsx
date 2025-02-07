@@ -120,7 +120,7 @@ const Medulogin = () => {
 
           <motion.button
             type="submit"
-            className="w-full mt-6 mx-auto px-20 py-3 text-white text-xs font-serif rounded-md bg-[#17A2B8] hover:bg-[#70aeb8]" // ✅ Default color for Healthcare
+            className="w-full mt-6 mx-auto px-20 py-3 text-white text-xs font-serif rounded-md bg-[#17A2B8] hover:bg-[#548890]" // ✅ Default color for Healthcare
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
