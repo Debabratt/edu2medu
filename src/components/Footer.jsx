@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">About Us</h3>
             <p className="text-sm">
-              We are dedicated to providing the best services to our customers. Explore a variety of solutions tailored to meet your needs.
+            At Edu2Medu, we believe that knowledge is the key to making informed decisions—whether it’s choosing the right educational institution, finding healthcare services, or staying updated with the latest industry trends.
             </p>
           </div>
 
