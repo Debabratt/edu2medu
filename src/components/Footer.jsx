@@ -23,7 +23,14 @@ const Footer = () => {
               <li><Link to={"/contact"} className="text-sm text-gray-400 hover:text-white">Contact</Link></li>
             </ul>
           </div>
-
+{/* New Registration Section */}
+<div>
+            <h3 className="text-xl font-semibold mb-4">Registration</h3>
+            <ul>
+              <li><Link to={"/register"} className="text-sm text-gray-400 hover:text-white">Register School</Link></li>
+              <li><Link to={"/registermedical"} className="text-sm text-gray-400 hover:text-white">Register Hospitals</Link></li>
+            </ul>
+          </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <p className="text-sm">123 Main Street, Cityville, Country</p>
@@ -32,13 +39,7 @@ const Footer = () => {
           </div>
 
           {/* New Registration Section */}
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Registration</h3>
-            <ul>
-              <li><Link to={"/register"} className="text-sm text-gray-400 hover:text-white">Register School</Link></li>
-              <li><Link to={"/registermedical"} className="text-sm text-gray-400 hover:text-white">Register Hospitals</Link></li>
-            </ul>
-          </div>
+          
         </div>
 
         <div className="border-t border-gray-600 mt-8 pt-4">

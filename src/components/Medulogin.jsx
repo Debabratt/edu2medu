@@ -2,21 +2,21 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Login = () => {
+const Medulogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loginType, setLoginType] = useState("education");
+  const [loginType, setLoginType] = useState("healthcare"); // ✅ Default set to 'healthcare'
   const navigate = useNavigate();
 
   const handleRegisterNavigate = () => {
-    navigate(loginType === "education" ? "/register" : "/registermedical");
+    navigate(loginType === "healthcare" ? "/registermedical" : "/register");
   };
 
   const handleForgotPasswordNavigate = () => {
     navigate(
-      loginType === "education"
-        ? "/forgot-password"
-        : "/forgot-password-medical"
+      loginType === "healthcare"
+        ? "/forgot-password-medical"
+        : "/forgot-password"
     );
   };
 
@@ -35,14 +35,17 @@ const Login = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: "spring", stiffness: 100, duration: 0.8 }}
       >
-        <h2 className="text-xl font-serif mb-4 text-center text-[#E76F51]">
+        <h2 className="text-xl font-serif mb-4 text-center text-[#17A2B8]">
           Login
-        </h2>
-
+        </h2>{" "}
+        {/* ✅ Default color for Healthcare */}
         {/* Category Selection */}
         <div className="flex justify-center mb-4">
           <motion.button
-            onClick={() => setLoginType("education")}
+            onClick={() => {
+              setLoginType("education");
+              navigate("/login");
+            }}
             className={`px-6 py-2 rounded-l-md font-serif text-sm ${
               loginType === "education"
                 ? "bg-[#E76F51] text-white"
@@ -53,11 +56,9 @@ const Login = () => {
           >
             Education
           </motion.button>
+
           <motion.button
-            onClick={() => {
-              setLoginType("healthcare");
-              navigate("/healthcarelogin");
-            }}
+            onClick={() => setLoginType("healthcare")}
             className={`px-6 py-2 rounded-r-md font-serif text-sm ${
               loginType === "healthcare"
                 ? "bg-[#17A2B8] text-white"
@@ -69,7 +70,6 @@ const Login = () => {
             Healthcare
           </motion.button>
         </div>
-
         {/* ✅ Admin Login Button */}
         <div className="flex justify-center mb-6">
           <motion.button
@@ -81,7 +81,6 @@ const Login = () => {
             Admin
           </motion.button>
         </div>
-
         <form>
           <div className="mb-4 mt-2">
             <label
@@ -121,25 +120,18 @@ const Login = () => {
 
           <motion.button
             type="submit"
-            className={`w-full mt-6 mx-auto px-20 py-3 text-white text-xs font-serif rounded-md ${
-              loginType === "education"
-                ? "bg-[#E76F51] hover:bg-[#9f6b5e]"
-                : "bg-[#17A2B8] hover:bg-[#70aeb8]"
-            }`}
+            className="w-full mt-6 mx-auto px-20 py-3 text-white text-xs font-serif rounded-md bg-[#17A2B8] hover:bg-[#70aeb8]" // ✅ Default color for Healthcare
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Login
           </motion.button>
         </form>
-
         <div className="mt-3 text-center">
           <p className="text-xs">
             <motion.button
               onClick={handleForgotPasswordNavigate}
-              className={`${
-                loginType === "education" ? "text-[#E76F51]" : "text-[#17A2B8]"
-              } font-medium hover:underline`}
+              className="text-[#17A2B8] font-medium hover:underline" // ✅ Default color for Healthcare
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -147,13 +139,12 @@ const Login = () => {
             </motion.button>
           </p>
         </div>
-
         <div className="mt-3 text-center">
           <p className="text-xs font-medium text-gray-600">
             Don't have an account?{" "}
             <motion.button
               onClick={handleRegisterNavigate}
-              className="text-[#E76F51] font-medium hover:underline"
+              className="text-[#17A2B8] font-medium hover:underline" // ✅ Default color for Healthcare
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -166,4 +157,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Medulogin;

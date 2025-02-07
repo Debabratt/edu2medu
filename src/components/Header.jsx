@@ -42,7 +42,7 @@ export default function Header() {
         <div className="w-[40%] bg-[#17A2B8] flex justify-end items-center px-6 text-white relative before:absolute before:top-0 before:left-[-20px] before:w-12 before:h-full before:bg-white before:skew-x-[-30deg]">
           <div className="flex items-center gap-6 lg:px-10">
             {/* Animated Phone Number */}
-           {/* Animated Phone Number */}
+         
 <div className="hidden md:flex items-center gap-2 px-6">
   <motion.div
     animate={{ rotate: [-10, 10, -10] }}
@@ -109,7 +109,7 @@ export default function Header() {
               </li>
               <li className="ml-auto">
                 <Link to="/jobs" className="py-4 block">
-                 Careers
+                Job opening
                 </Link>
               </li>
             </ul>
@@ -162,7 +162,7 @@ export default function Header() {
               <li>
                 
                 <Link to="/jobs" className="py-2" onClick={() => setMenuOpen(false)}>
-           Careers
+          Job opening
                 </Link>
               </li>
               

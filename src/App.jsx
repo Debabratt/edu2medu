@@ -23,9 +23,12 @@ import MedicalCl from "./components/MedicalCl";
 import DaySchoolM from "./components/DaySchoolM";
 import News from "./components/News";
 import UserRegisterM from "./components/UserRegisterM";
-import FooterR from "./components/FooterR";
+
 import Jobs from "./components/Jobs";
 import About from "./components/About";
+import Medulogin from "./components/Medulogin";
+import Adminlogin from "./components/Adminlogin";
+
 
 function App() {
   return (
@@ -68,6 +71,12 @@ function App() {
         <Route path="/register" element={<> <UserRegister /><Footer/></>}/>
         <Route path="/registermedical" element={<><UserRegisterM /><Footer/></>} />
         <Route path="/login" element={<><Login /> <Footer/></>} />
+       
+        <Route path="/healthcarelogin" element={<><Medulogin /> <Footer/></>} />
+        <Route path="/admin-login" element={<><Adminlogin /> <Footer/></>} />
+
+
+
 
         {/* School and Boarding Routes */}
         <Route path="/board-school" element={<><Header/><BoardingSchool /><Footer/></>} />
