@@ -31,7 +31,7 @@ const UserRegisterM = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: 'spring', stiffness: 100, duration: 0.8 }}
       >
-        <h2 className="text-xl font-serif mb-4 text-center text-[#fa7b5c]">Register</h2>
+        <h2 className="text-xl font-serif mb-4 text-center text-[#17A2B8]">Register</h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <div >
