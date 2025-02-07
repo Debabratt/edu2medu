@@ -35,7 +35,7 @@ const UserRegisterM = () => {
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <div >
-            <label htmlFor="name" className="block text-xs font-bold text-gray-700">Name</label>
+            <label htmlFor="name" className="block py-2 text-xs font-bold text-gray-700">Name</label>
             <input
               type="text"
               id="name"
@@ -46,9 +46,20 @@ const UserRegisterM = () => {
               required
             />
           </div>
-
-          <div className='mt-5'>
-            <label htmlFor="email" className="block text-xs font-bold text-gray-700">Email</label>
+          <div className='mt-2'>
+            <label htmlFor="phone" className="block py-2 text-xs font-bold text-gray-700">Mobile number</label>
+            <input
+              type="text"
+              id="phone"
+              value={phone}
+              placeholder='Enter your mobile number '
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full px-2 py-1 text-black border rounded text-xs focus:ring-1 focus:ring-[#E76F51]"
+              required
+            />
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="email" className="block py-2 text-xs font-bold text-gray-700">Email</label>
             <input
               type="email"
               id="email"
@@ -60,8 +71,8 @@ const UserRegisterM = () => {
             />
           </div>
 
-          <div className='mt-5'>
-            <label htmlFor="password" className="block text-xs font-bold text-gray-700">Password</label>
+          <div className='mt-2'>
+            <label htmlFor="password" className="block py-2 text-xs font-bold text-gray-700">Password</label>
             <input
               type="password"
               id="password"
@@ -73,21 +84,10 @@ const UserRegisterM = () => {
             />
           </div>
 
-          <div className='mt-5'>
-            <label htmlFor="phone" className="block text-xs font-bold text-gray-700">Number</label>
-            <input
-              type="text"
-              id="phone"
-              value={phone}
-              placeholder='Enter your number '
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full px-2 py-1 text-black border rounded text-xs focus:ring-1 focus:ring-[#E76F51]"
-              required
-            />
-          </div>
+          
 
-          <div className='mt-5'>
-            <label htmlFor="gender" className="block text-xs font-bold text-gray-700">Category</label>
+          <div className='mt-2'>
+            <label htmlFor="gender" className="block py-2 text-xs font-bold text-gray-700">Category</label>
             <select
               id="gender"
               value={gender}
@@ -95,17 +95,19 @@ const UserRegisterM = () => {
               className="w-full px-2 py-1 border rounded text-xs focus:ring-1 focus:ring-[#E76F51]"
               required
             >
-              <option value="" className='bg-[#E76F51]'>Category </option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
+              
+              <option value="select"  className='disabled hidden'>Select Category</option>  
+    <option value="Hospitals" className="hover:bg-[#E76F51]">Hospitals</option>
+    <option value="Privateclinics" className="hover:bg-[#E76F51]">Private Clinics</option>
+    <option value="Medicalstores" className="hover:bg-[#E76F51]">Medical Store's</option>
+  
+  </select>
           </div>
 
           <motion.button
             type="submit"
             disabled={loading}
-            className={`w-full py-1 mt-10 text-white text-xs font-medium rounded ${loading ? 'bg-gray-400' : 'bg-[#17A2B8] hover:bg-[#81cddc]'} transition duration-300`}
+            className={`w-full py-1 mt-4 text-white text-xs font-medium rounded ${loading ? 'bg-gray-400' : 'bg-[#17A2B8] hover:bg-[#81cddc]'} transition duration-300`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

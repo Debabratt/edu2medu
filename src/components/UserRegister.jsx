@@ -35,7 +35,7 @@ const UserRegister = () => {
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <div >
-            <label htmlFor="name" className="block text-xs font-bold text-gray-700">Name</label>
+            <label htmlFor="name" className="block py-2 text-xs font-bold text-gray-700">Name</label>
             <input
               type="text"
               id="name"
@@ -46,9 +46,20 @@ const UserRegister = () => {
               required
             />
           </div>
-
-          <div className='mt-5'>
-            <label htmlFor="email" className="block text-xs font-bold text-gray-700">Email</label>
+          <div className='mt-2'>
+            <label htmlFor="phone" className="block py-2 text-xs font-bold text-gray-700">Mobile number</label>
+            <input
+              type="text"
+              id="phone"
+              value={phone}
+              placeholder='Enter your mobile number '
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full px-2 py-1 text-black border rounded text-xs focus:ring-1 focus:ring-[#E76F51]"
+              required
+            />
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="email" className="block py-2 text-xs font-bold text-gray-700">Email</label>
             <input
               type="email"
               id="email"
@@ -60,8 +71,8 @@ const UserRegister = () => {
             />
           </div>
 
-          <div className='mt-5'>
-            <label htmlFor="password" className="block text-xs font-bold text-gray-700">Password</label>
+          <div className='mt-2'>
+            <label htmlFor="password" className="block py-2 text-xs font-bold text-gray-700">Password</label>
             <input
               type="password"
               id="password"
@@ -73,34 +84,24 @@ const UserRegister = () => {
             />
           </div>
 
-          <div className='mt-5'>
-            <label htmlFor="phone" className="block text-xs font-bold text-gray-700">Number</label>
-            <input
-              type="text"
-              id="phone"
-              value={phone}
-              placeholder='Enter your number '
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full px-2 py-1 text-black border rounded text-xs focus:ring-1 focus:ring-[#E76F51]"
-              required
-            />
-          </div>
-
-          <div className='mt-5'>
-            <label htmlFor="gender" className="block text-xs font-bold text-gray-700">Gender</label>
-            <select
-              id="gender"
-              value={gender}
-              onChange={(e) => setGender(e.target.value)}
-              className="w-full px-2 py-1 border rounded text-xs focus:ring-1 focus:ring-[#E76F51]"
-              required
-            >
-              <option value="" className='bg-[#E76F51]'>Select</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+       
+          <div className="mt-2">
+  <label htmlFor="gender" className="block py-2 text-xs font-bold text-gray-700">Category</label>
+  <select
+    id="category"
+    value={gender}
+    onChange={(e) => setGender(e.target.value)}
+    className="w-full px-2 py-1 border rounded text-xs focus:ring-1  focus:ring-[#E76F51] text-gray-700"
+    required
+  >
+    <option value="select" disabled hidden>Select Category</option>  
+    <option value="Day School" className="hover:bg-[#E76F51]">Day School</option>
+    <option value="Play School" className="hover:bg-[#E76F51]">Play School</option>
+    <option value="Boarding School" className="hover:bg-[#E76F51]">Boarding School</option>
+    <option value="Coaching Centre" className="hover:bg-[#E76F51]">Coaching Centre</option>
+    <option value="Private Tutor" className="hover:bg-[#E76F51]">Private Tutor</option>
+  </select>
+</div>
 
           <motion.button
             type="submit"

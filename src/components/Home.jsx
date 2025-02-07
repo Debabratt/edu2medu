@@ -25,7 +25,7 @@ const Home = () => {
 
   const educationOptions = [
     "Day School",
-    "Board School",
+    "Boarding School",
     "Play School",
     "Coaching Centre",
     "Private Tutor",

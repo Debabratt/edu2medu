@@ -66,7 +66,7 @@ function App() {
 
         {/* Register and Login Routes */}
         <Route path="/register" element={<> <UserRegister /><Footer/></>}/>
-        <Route path="/registermedical" element={<><UserRegisterM /><FooterR/></>} />
+        <Route path="/registermedical" element={<><UserRegisterM /><Footer/></>} />
         <Route path="/login" element={<><Login /> <Footer/></>} />
 
         {/* School and Boarding Routes */}
