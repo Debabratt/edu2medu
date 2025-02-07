@@ -22,11 +22,11 @@ const UserRegister = () => {
 
   return (
     <div
-      className="relative lg:mt-33 mt-25 min-h-[550px] bg-cover bg-center"
+      className="relative lg:mt-33 mt-25 min-h-screen bg-cover bg-center"
       style={{ backgroundImage: 'url(/login.jpg)' }}
     >
       <motion.div
-        className="mt-4 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-opacity-50 p-8 sm:p-10 rounded-lg shadow-2xl z-10 w-full max-w-md sm:max-w-lg md:max-w-xl mb-[-20px]"
+        className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-opacity-50 p-8 sm:p-10 rounded-lg shadow-xl z-10 w-full max-w-md sm:max-w-lg md:max-w-xl mb-[-20px]"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ type: 'spring', stiffness: 100, duration: 0.8 }}
@@ -34,7 +34,7 @@ const UserRegister = () => {
         <h2 className="text-xl font-serif mb-4 text-center text-[#fa7b5c]">Register</h2>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-          <div>
+          <div >
             <label htmlFor="name" className="block text-xs font-bold text-gray-700">Name</label>
             <input
               type="text"
@@ -47,7 +47,7 @@ const UserRegister = () => {
             />
           </div>
 
-          <div>
+          <div className='mt-5'>
             <label htmlFor="email" className="block text-xs font-bold text-gray-700">Email</label>
             <input
               type="email"
@@ -60,7 +60,7 @@ const UserRegister = () => {
             />
           </div>
 
-          <div>
+          <div className='mt-5'>
             <label htmlFor="password" className="block text-xs font-bold text-gray-700">Password</label>
             <input
               type="password"
@@ -73,7 +73,7 @@ const UserRegister = () => {
             />
           </div>
 
-          <div>
+          <div className='mt-5'>
             <label htmlFor="phone" className="block text-xs font-bold text-gray-700">Number</label>
             <input
               type="text"
@@ -86,7 +86,7 @@ const UserRegister = () => {
             />
           </div>
 
-          <div>
+          <div className='mt-5'>
             <label htmlFor="gender" className="block text-xs font-bold text-gray-700">Gender</label>
             <select
               id="gender"
@@ -105,7 +105,7 @@ const UserRegister = () => {
           <motion.button
             type="submit"
             disabled={loading}
-            className={`w-full py-1 text-white text-xs font-medium rounded ${loading ? 'bg-gray-400' : 'bg-[#E76F51] hover:bg-[#9f6b5e]'} transition duration-300`}
+            className={`w-full py-1 mt-10 text-white text-xs font-medium rounded ${loading ? 'bg-gray-400' : 'bg-[#E76F51] hover:bg-[#9f6b5e]'} transition duration-300`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
